@@ -1,0 +1,308 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(251,255,215,1) 13%, rgba(255,223,210,1) 42%, rgba(251,219,254,1) 63%, rgba(218,255,253,1) 80%, rgba(254,255,231,1) 100%);
+
+    }
+
+#mainContent {
+    display: none;
+}
+
+#loadingScreen, 
+#mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(251,255,215,1) 13%, rgba(255,223,210,1) 42%, rgba(251,219,254,1) 63%, rgba(218,255,253,1) 80%, rgba(254,255,231,1) 100%);
+}
+
+.modal-content {
+    background: transparent;
+    border: none;
+}
+
+.modal-body,
+#mainContent {
+    text-align: center;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilo base para la imagen del modal */
+#img-modal {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    animation: rotate 1s 0.5s; /* Aplica la animación de rotación durante 2 segundos de forma infinita */
+}
+
+body {
+    font-family: 'Rakkas', sans-serif;
+}
+
+footer {
+    background-color: transparent; /* Color de fondo del pie de página */
+    padding: 9px; /* Espaciado interno para el contenido del pie de página */
+    text-align: center; /* Centrar el contenido del pie de página */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-main {
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(251,255,215,1) 13%, rgba(255,223,210,1) 42%, rgba(251,219,254,1) 63%, rgba(218,255,253,1) 80%, rgba(254,255,231,1) 100%);
+    width: 101%;
+    padding: 4px;
+    position: relative;
+    top: 8px;
+    margin-left: -2px;
+}
+
+/* Estilos específicos para el pie de página en el modal */
+#loadingScreen .modal-content .modal-body footer {
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo dentro del footer */
+    font-size: 0.5em; /* Tamaño de fuente base en relación con el tamaño del texto predeterminado del navegador */
+    color: rgba(133, 47, 13, 0.37);
+}
+
+#mainContent {
+    display: none;
+}
+
+#mainContent .card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: 0;
+    --bs-card-spacer-x: -1rem;
+    padding: 0 !important;
+}
+
+#mainContent .card img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+}
+
+#loginForm label.form-label {
+    text-align: center;
+    display: block;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"],
+#loginForm input[type="email"],
+#registerForm input[type="text"],
+#registerForm input[type="password"],
+#registerForm input[type="email"],
+#resetPasswordForm input[type="email"],
+#resetPasswordForm input[type="verificationCode"] {
+    display: inline-block ;
+    max-width: 400px; /* Ancho máximo */
+    min-width: 200px; /* Ancho mínimo */
+    width: 100%; /* Garantiza que las casillas de texto ocupen el 100% del ancho del contenedor padre */
+    margin: 0 auto; /* Centra las casillas de texto dentro del contenedor */
+    font-size: 90%;
+}
+
+.form-control {
+    text-align: center;
+}
+
+.text-muted {
+    font-size: small;
+}
+
+/* GOOGLE MAP */
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+
+@media screen and (min-width: 200px) {
+    footer p {
+        font-size: 0.5em; 
+    }
+    #img-modal {
+        max-width: 40%; 
+    }
+    #mainContent .card img {
+        max-width: 65%;
+    }
+    .menu {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    footer p {
+        font-size: 0.6em;
+    }
+    #img-modal {
+        max-width: 50%;
+    }
+    #mainContent .card img {
+        max-width: 40%; 
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    footer p {
+        font-size: 0.7em;
+    }
+    #img-modal {
+        max-width: 60%
+    }
+    #mainContent .card img {
+        max-width: 30%;
+    }
+}
+
+/*MENU FAB */
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+
+.menu {
+    font-family:'Montserrat',sans-serif; width:240px; margin:75px auto 0;cursor:pointer;z-index: 1; position: absolute; top: 0; left: 0; cursor: pointer; margin: 15px;
+}
+.title {
+    width:100%;box-sizing:border-box;background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(251,255,215,1) 13%, rgba(255,223,210,1) 42%, rgba(251,219,254,1) 63%, rgba(218,255,253,1) 80%, rgba(254,255,231,1) 100%);;padding:14px;border-radius:4px;position:relative;box-shadow:0 0 40px -10px #000;color:#505050
+}
+span {
+    float:right;font-size:18px!important
+}
+.dropdown {
+    width:100%;background:#fff;border-radius:4px;box-shadow:0 0 40px -10px #000;color:#505050;margin-top:24px;max-height:0;overflow:hidden;transition:all .5s
+}
+.down {
+    max-height:350px
+}
+.arrow {
+    border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px solid #fff;position:absolute;right:20px;bottom:-24px;display:none
+}
+.arrow.gone{
+    display:block
+}
+.dropdown p { 
+    padding:6px 14px;margin:0;transition:all .1s
+}
+.dropdown p:hover {
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(251,255,215,1) 13%, rgba(255,223,210,1) 42%, rgba(251,219,254,1) 63%, rgba(218,255,253,1) 80%, rgba(254,255,231,1) 100%);;-webkit-transform:scale(1.05);color:rgba(82, 50, 9, 0.8);box-shadow:0 0 30px -10px #000
+}
+
+/* FILTER FLOATING BTN */
+body {
+	background-color: #f5f5f5;
+}
+
+.adminActions {
+    position: fixed;
+    bottom: 40px; right: 15px;
+}
+
+.adminButton {
+    height: 40px;
+    width: 40px;
+    background-color: rgba(124, 131, 156, 0.918);
+    border-radius: 50%;
+    display: block;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.adminButton i {
+    font-size: 22px;
+}
+
+.adminButton svg {
+    margin-top: 2px;
+    padding: 4px;
+    width: 35px;
+    height: 35px;
+}
+
+.adminButtons {
+    position: absolute;
+    width: 100%;
+    bottom: 120%;
+    text-align: center;
+    
+}
+
+.adminButtons a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 120% ;
+    text-decoration: none;
+    margin: 10px auto 0;
+    line-height: 1.15;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    box-shadow: 0 0 5px 1px rgba(51, 51, 51, .3);
+}
+
+.adminButtons a:hover {
+    transform: scale(1.05);
+}
+
+.adminButtons a:nth-child(1) {background-color: #ff98b2c0; transition: opacity .2s ease-in-out .3s, transform .15s ease-in-out;}
+.adminButtons a:nth-child(2) {background-color: #a7e2fdc2; transition: opacity .2s ease-in-out .25s, transform .15s ease-in-out;}
+.adminButtons a:nth-child(3) {background-color: #c9ffaac5; transition: opacity .2s ease-in-out .2s, transform .15s ease-in-out;}
+.adminButtons a:nth-child(4) {background-color: #f5ff9ea6; transition: opacity .2s ease-in-out .15s, transform .15s ease-in-out;}
+
+.adminActions a i {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.adminToggle {
+    -webkit-appearance: none;
+    position: absolute;
+    border-radius: 50%;
+    top: 0; left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 2;
+    transition: box-shadow .2s ease-in-out;
+    box-shadow: 0 3px 5px 1px rgba(51, 51, 51, .3);
+}
+
+.adminToggle:hover {
+    box-shadow: 0 3px 6px 2px rgba(51, 51, 51, .3);
+}
+
+.adminToggle:checked ~ .adminButtons a {
+    opacity: 1;
+    visibility: visible;
+}
